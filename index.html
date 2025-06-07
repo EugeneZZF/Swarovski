@@ -12,7 +12,7 @@
     <div class="container">
         <header class="header">
             <div class="header_cont">
-              <img class="header_menu" src="./images/menu.svg"></img>
+              <img id="openMenuBtn" class="header_menu" src="./images/menu.svg" />
                 <img class="logo_header" src="./images/logo.svg"></img>
                 <nav class="nav">
                     <ul>
@@ -29,8 +29,8 @@
                 </nav>
             </div>            
         </header>
-        <div class="menu_m">
-            <img class="close_m" src="./images/close_m.svg"></img>
+        <div class="menu_m" id="menu">
+    <img id="closeMenuBtn" class="close_m" src="./images/close_m.svg" />
             <div class="menu_a_1">
               <a>Часы</a>
             <a>Украшения</a>
@@ -279,6 +279,21 @@
         </footer>
     </div>
   </body>
+  <script>
+  const openBtn = document.getElementById('openMenuBtn');
+  const closeBtn = document.getElementById('closeMenuBtn');
+  const menu = document.getElementById('menu');
+
+  openBtn.addEventListener('click', () => {
+    console.log(321312)
+    menu.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    menu.classList.remove('active'); console.log(321312)
+  });
+</script>
+
   <script>
   const slider = document.getElementById('sliderContent');
   const range = document.getElementById('sliderRange');
